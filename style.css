@@ -17,6 +17,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     color: var(--black-text);
+    background-color: var(--white-ish-background);
 }
 button {
     background-color: var(--blue-text);
@@ -29,6 +30,7 @@ button {
 button:hover {
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.479);
+    filter: brightness(96%);
 }
 h3 {
     color: var(--blue-text);
@@ -37,11 +39,22 @@ h2 {
     font-weight: 300;
     font-size: 1.8rem;
 }
+.div1-2, .div6, .div7, .div8 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.div3-5 {
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+}
+
+        /* Header styling */
 
 header {
     background-image: url(content/premium_photo-1680534423302-7a3e7d761ff0.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.46);
     background-blend-mode: overlay;
     position: relative;
     display: flex;
@@ -82,6 +95,7 @@ header .header_text {
 header .header_button :first-child{
     background-color: var(--white-background);
     color: var(--black-text);
+    font-weight: 700;
 }
 header .header_button :nth-child(2){
     color: var(--white-background);
@@ -93,7 +107,6 @@ main {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     font-size: 0.8rem;
 }
 main > div{
@@ -107,6 +120,9 @@ main > div{
 .div1 p, .div3 p, .div6 p {
     width: 80%;
     margin: auto;
+}
+.div1 {
+    margin-top: 2rem;
 }
 
 .div2 {
@@ -140,7 +156,9 @@ main > div{
 .div2 p {
     display: none;
 }
-
+.div3 {
+    margin-bottom: 2rem;
+}
 .break {
     width: 100%;
     height: 2px;
@@ -236,6 +254,9 @@ main > div{
 .div8 > div > :last-child {
     text-align: left;
 }
+.storiesButton {
+    display: none;
+}
 
     /* Footer styling */
 
@@ -284,6 +305,9 @@ footer {
     text-decoration: none;
     color: inherit;
 }
+.nav a:hover {
+    font-weight: 700;
+}
 footer img {
     width: 80px;
     margin: auto;
@@ -300,6 +324,15 @@ footer > :last-child {
     @media (min-width: 1024px) {
         h2 {
             font-size: 2.4rem;
+        }
+        .div1-2, .div6, .div7, .div8 {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-left: 0;
+        padding-right: 0;
+        }
+        .div3-5 {
+            padding: 3vw 15vw 3vw 15vw;
         }
         header {
             height: 100vh;
@@ -341,15 +374,15 @@ footer > :last-child {
             font-size: 3rem;
         }
         header button {
-            width: 150px;
+            width: 180px;
             padding: 10px;
             margin: 1rem;
         }
 
-        main {
-            padding: 5vw;
-        }
         /* ******* */
+        .div1 {
+            margin-top: 80px;
+        }
         .div2 {
             display: flex;
             justify-content: center;
@@ -427,12 +460,20 @@ footer > :last-child {
             flex-direction: column;
             justify-content: space-between;
         }
+        .storiesButton {
+            display: block;
+            width: 280px;
+            height: 45px;
+            border-radius: 3px;
+            margin: 60px auto 80px auto;
+            font-size: var(--font-desktop);
+        }
         /* ******* */
         footer > :last-child {
             background-color: #253944;
 
             position: absolute;
-            width: 100vw;
+            width: 100%;
             left: 0;
             height: 40px;
         }
